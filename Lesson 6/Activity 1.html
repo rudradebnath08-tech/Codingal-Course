@@ -1,29 +1,68 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Personal Details Form</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 1 Lesson 6 Activity 1 - Personal Details Form</title>
 </head>
 
 <body>
     <h1>Personal Details Form</h1>
+    
+
     <form>
-        <label>Name</label><br> 
-        <input type="text" id="name"><br><br>
-        <label>Email ID</label><br>
-        <input type="text" id="email"><br><br>
-        <label>Contact Number (This will be hidden)</label><br>
-        <input type="password" id="contact"><br><br>
-        <label>Gender</label><br>
-        <input type="radio" id="female" name="gender" value="Female">Female<br>
-        <input type="radio" id="male" name="gender" value="Male">Male<br><br>
-        <label>Favourite City</label><br>
-        <input type="checkbox" id="city" value="New Delhi">New Delhi<br>
-        <input type="checkbox" id="city" value="Kolkata">Kolkata<br><br>
-        <input type="submit">
+        <fieldset>
+            <legend><h3>Fill in these basic details to continue</h3></legend>
+        <label for="name">Name</label> <br />
+        <!-- ADD AN INPUT - SIMPLE TEXT TYPE -->
+         <input type="text" id="name" name="name" />
+        <br /><br />
+
+        <label for="email">Email ID</label> <br />
+        <!-- ADD AN INPUT - EMAIL TYPE -->
+         <input type="email" id="email" name="email" />
+        <br /><br />
+
+        <label for="contact">Contact Number (We won't reveal)</label> <br />
+        <!-- ADD AN INPUT - PASSWORD TYPE -->
+         <input type="password" id="contact" name="contact" />
+        <br /><br />
+
+        Gender <br />
+        <!-- ADD A LABELS/INPUTS - RADIO TYPE -->
+         
+        <label>
+            <input type="radio" name="gender" id="male" value="Male"> Male
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" id="female" value="Female"> Female
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" id="other" value="Other"> Other
+        </label>
+
+        <br /><br />
+
+        Favorite food<br />
+        <!-- ADD A LABELS/INPUTS - CHECKBOX TYPE -->
+         <label>
+            <input type="checkbox" name="food" id="Biryani" value="Biryani"> Biryani
+         </label>
+        <br>
+        <label>
+            <input type="checkbox" name="food" id="Pizza" value="Pizza"> Pizza
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="food" id="Burgers" value="Burgers"> Burgers
+        </label>
+        <br>
+
+        <input type="submit" value="Create Account">
+        </fieldset>
     </form>
 </body>
 

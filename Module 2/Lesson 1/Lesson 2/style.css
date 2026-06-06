@@ -1,0 +1,46 @@
+body {
+    background-image: linear-gradient(to bottom, crimson, indigo);
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100vh;
+}
+
+.page-header {
+    background-image: linear-gradient(to right, indigo, coral);
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+}
+
+.fact-card {
+    background-color: rgb(167, 74, 68);
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+
+}
+
+.fact-card h2 {
+    color: rgb(253, 143, 103);
+
+}
+
+.star {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(85, 19, 19, 0.548);
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { 
+        background-color: rgb(52, 64, 129);
+     }
+    to { 
+        background-color: rgb(212, 83, 83);
+     }
+        
+}
+
+.footer-text {}

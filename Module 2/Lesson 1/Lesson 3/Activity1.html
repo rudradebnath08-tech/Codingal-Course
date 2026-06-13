@@ -17,10 +17,25 @@
 
         /* Typography + Text Shadow — big bold title with an orange shadow */
         .hero-name{
-            font-size: 60px;
-            font-weight: bold;
-            color: yellow;
-            text-shadow: 3px 3px 22px orange;
+           .california {
+    background: #1a0a0a;
+    color: tomato;
+    text-shadow:
+        0 0 10px orangered,
+        0 0 20px firebrick,
+        0 0 40px maroon,
+        0 0 80px darkred;
+    filter: saturate(60%);
+    animation: flicker steps(100) 3s 3s infinite;
+    font-family: 'Marck Script', cursive;
+}
+
+@keyframes flicker {
+    50% {
+        color: white;
+        filter: saturate(200%) hue-rotate(20deg);
+    }
+}
         }
 
 
@@ -97,3 +112,4 @@
 </body>
 
 </html>
+

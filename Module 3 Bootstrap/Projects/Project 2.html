@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adventure Park Challenge</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+        body {
+            background: radial-gradient(circle at top, #0d1630, #07111f 42%, #02060b 100%);
+            color: #f1fcff;
+            font-family: 'Share Tech Mono', monospace;
+            text-align: center;
+            padding: 40px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: #8cfffc;
+            font-family: 'Monoton', cursive;
+            font-size: 4rem;
+            letter-spacing: 0.15rem;
+            text-shadow: 0 0 18px rgba(140, 255, 252, 0.8);
+            margin-bottom: 0.3rem;
+        }
+
+        h2 {
+            color: #ff97f8;
+            margin-top: 36px;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.08em;
+            text-shadow: 0 0 12px rgba(255, 151, 248, 0.6);
+        }
+
+        h3 {
+            color: #ffffff;
+            border: 1px dashed rgba(255, 255, 255, 0.25);
+            padding: 14px 18px;
+            margin: 0.8rem auto;
+            max-width: 760px;
+            border-radius: 18px;
+            background: rgba(18, 34, 60, 0.55);
+            box-shadow: 0 0 18px rgba(56, 142, 255, 0.15);
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        h3 small {
+            display: block;
+            margin-top: 0.4rem;
+            font-size: 0.88rem;
+            color: #c8f5ff;
+        }
+
+        small {
+            color: #c8f5ff;
+            opacity: 0.95;
+            letter-spacing: 0.03em;
+        }
+
+        dl {
+            text-align: left;
+            display: inline-block;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        dt {
+            color: #78d3ff;
+            font-weight: 900;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.06em;
+            text-shadow: 0 0 10px rgba(120, 211, 255, 0.4);
+            margin-top: 1rem;
+        }
+
+        dd {
+            color: #dbeeff;
+            margin: 0.5rem 0 1.2rem;
+            line-height: 1.75;
+            font-family: 'Share Tech Mono', monospace;
+            background: rgba(12, 25, 42, 0.72);
+            padding: 1rem 1.1rem;
+            border-radius: 16px;
+            box-shadow: inset 0 0 16px rgba(14, 47, 82, 0.6);
+        }
+
+        mark {
+            background: linear-gradient(135deg, #8cfffc, #5a72ff);
+            color: #071f32;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 0 14px rgba(140, 255, 252, 0.35);
+        }
+
+        code {
+            background: rgba(20, 35, 56, 0.95);
+            color: #8cfffc;
+            padding: 6px 10px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: 'Share Tech Mono', monospace;
+            border: 1px solid rgba(140, 255, 252, 0.35);
+        }
+
+        abbr {
+            color: #ffb3ff;
+            font-weight: 700;
+            cursor: help;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 8px rgba(255, 179, 255, 0.4);
+        }
+
+        pre {
+            background: linear-gradient(135deg, rgba(11, 26, 48, 0.95), rgba(18, 55, 93, 0.95));
+            color: #d7f7ff;
+            padding: 18px;
+            border-radius: 20px;
+            display: inline-block;
+            text-align: left;
+            font-family: 'Share Tech Mono', monospace;
+            box-shadow: 0 0 24px rgba(0, 255, 255, 0.18);
+        }
+
+        blockquote {
+            border-left: 4px solid #80d1ff;
+            padding-left: 20px;
+            color: #e8faff;
+            font-style: italic;
+            display: inline-block;
+            text-align: left;
+            font-family: 'Georgia', serif;
+            background: rgba(8, 18, 32, 0.75);
+            border-radius: 18px;
+            box-shadow: 0 0 26px rgba(128, 209, 255, 0.14);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #7fd1ff, transparent);
+            margin: 40px auto;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to Adventure Park Challenge!</h1>
+    <p>Get ready to explore rides, challenges, and safety missions while learning typography in HTML and Bootstrap.</p>
+
+    <hr>
+
+    <h2>Adventure Levels</h2>
+    <p class="display-1">Extreme Explorer</p>
+    <p class="display-2">Mountain Rider</p>
+    <p class="display-3">Trail Runner</p>
+    <p class="display-4">New Adventurer</p>
+
+    <hr>
+ 
+    <h2>Visitor Passes</h2>
+    <h3>Aarav <small>Pass: Extreme Explorer</small></h3>
+    <h3>Zara <small>Pass: Trail Runner</small></h3>
+    <h3>Mia <small>Pass: Mountain Rider</small></h3>
+    <h3>Rohan <small>Pass: Extreme Explorer</small></h3>
+    <h3>Leo <small>Pass: New Adventurer</small></h3>
+    <h3>Aanya <small>Pass: Extreme Explorer</small></h3>
+    <h3>Noah <small>Pass: Mountain Rider</small></h3>
+    <h3>Isha <small>Pass: New Adventurer</small></h3>
+    <h3>Priya <small>Pass: Trail Runner</small></h3>
+    <h3>Maya <small>Pass: Mountain Rider</small></h3>
+
+    <hr>
+
+    <h2>Ride Dictionary</h2>
+    <dl>
+        <dt>Roller Coaster</dt>
+        <dd>A fast ride that takes visitors high above the park and then zooms down at high speed.</dd>
+
+        <dt>Treasure Trail</dt>
+        <dd>A mystery path where visitors solve clues in groups to find treasure. Whichever group finds it first, gets to keep it!</dd>
+
+        <dt>River Rush</dt>
+        <dd>A water ride that moves quickly through twists and turns. We Recommend riders to wear life jackets.</dd>
+    </dl>
+
+    <hr>
+
+    <h2>Safety Mission</h2>
+    <p>Please report to <mark>Gate 3</mark> before the challenge begins.</p>
+    <p>The rescue drill will happen near <mark>River Zone</mark>.</p>
+
+    <hr>
+
+    <h2>Ride Commands</h2>
+    <p>Start the coaster: <code>ride.start("Roller Coaster")</code></p>
+    <p>Open the trail: <code>trail.open("Treasure Trail")</code></p>
+    <p>Stop the ride: <code>ride.stop("River Rush")</code></p>
+
+    <hr>
+
+    <h2>Park Short Forms</h2>
+    <p><abbr title="Adventure Park Safety Team">APST</abbr> checks every ride before opening.</p>
+    <p><abbr title="River Rescue Unit">RRU</abbr> helps visitors near water rides.</p>
+    <p><abbr title="Junior Explorer Club">JEC</abbr> is for young adventure lovers.</p>
+
+    <hr>
+
+
+    <h2>Daily Challenge Schedule</h2>
+    <pre>
+10:00 AM  -  Gate Entry
+11:00 AM  -  Sky Coaster
+12:00 PM  -  Treasure Trail
+02:00 PM  -  River Rush
+03:00 PM  -  Final Adventure Badge
+  </pre>
+
+    <hr>
+
+    <h2>Adventure Quote</h2>
+    <blockquote class="blockquote">
+        <p>"Adventure begins when you try something new. Punks ain't afraid of nothing!"</p>
+        <footer class="blockquote-footer">Adventure Park Team</footer>
+    </blockquote>
+
+</body>
+
+</html>

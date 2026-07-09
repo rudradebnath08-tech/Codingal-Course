@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Study Progress Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        :root {
+            --bg: #f1f5ff;
+            --surface: rgba(255, 255, 255, 0.92);
+            --primary: #5257ff;
+            --accent: #ff6a4c;
+            --text: #1f2a45;
+            --muted: #6d7588;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top left, rgba(82, 87, 255, 0.18), transparent 30%),
+                        linear-gradient(180deg, #f9fbff 0%, #eef4ff 100%);
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+        }
+
+        .jumbotron {
+            background: linear-gradient(135deg, rgba(82, 87, 255, 0.92), rgba(80, 190, 255, 0.95));
+            color: white;
+            border-radius: 32px;
+            padding: 3rem 2rem;
+            box-shadow: 0 30px 90px rgba(67, 89, 196, 0.18);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .jumbotron::before {
+            content: '';
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            top: -45px;
+            right: -45px;
+        }
+
+        .jumbotron h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.04em;
+        }
+
+        .jumbotron p.lead {
+            font-size: 1.05rem;
+            max-width: 680px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.8rem;
+        }
+
+        .btn {
+            border-radius: 999px;
+            padding: 0.85rem 1.2rem;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 16px 30px rgba(31, 42, 68, 0.12);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background-color: rgba(255, 255, 255, 0.92);
+            color: var(--primary);
+            border: none;
+        }
+
+        .btn-success,
+        .btn-warning,
+        .btn-danger {
+            color: white;
+            border: none;
+        }
+
+        .container {
+            max-width: 1100px;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        p {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .badge {
+            border-radius: 999px;
+            padding: 0.65rem 0.9rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .progress {
+            height: 1.05rem;
+            background: rgba(82, 87, 255, 0.12);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 767px) {
+            .jumbotron {
+                padding: 2rem 1.2rem;
+            }
+
+            .jumbotron h1 {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOPIC 1: JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>My Study Progress Dashboard</h1>
+            <p class="lead">Track your subjects, completed lessons, and learning progress in one place.</p>
+
+            <!-- TOPIC 2: BUTTONS -->
+            <button class="btn btn-primary">Math</button>
+            <button class="btn btn-success">Science</button>
+            <button class="btn btn-warning">English</button>
+            <button class="btn btn-danger">Coding</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- TOPIC 3: BADGES -->
+        <h2 class="section-title">Lessons Completed <span class="badge badge-danger">24</span></h2>
+
+        <p>Math <span class="badge badge-primary">8 lessons</span></p>
+        <p>Science <span class="badge badge-success">6 lessons</span></p>
+        <p>English <span class="badge badge-warning">5 lessons</span></p>
+        <p>Coding <span class="badge badge-info">5 lessons</span></p>
+
+        <!-- TOPIC 4: PROGRESS BARS -->
+        <h2 class="section-title">Subject Progress</h2>
+
+        <p>Math</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-primary" style="width: 80%">80%</div>
+        </div>
+
+        <p>Science</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-success" style="width: 65%">65%</div>
+        </div>
+
+        <p>English</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-warning" style="width: 55%">55%</div>
+        </div>
+
+        <p>Coding</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-danger" style="width: 70%">70%</div>
+        </div>
+
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 L3 Loops and Arrays</title>
+</head>
+<body>
+    <h1>JS Loops and Arrays</h1>
+
+    <p id="result"></p>
+
+    <ol id="fruits">
+
+    </ol>
+    
+    <script>
+        // An array is a list of values //
+        let fruits = ["Kiwi", "Pineapple", "Cherry", "Strawberry", "Raspberry", "Blackberry", "Muskmelon"];
+
+        console.log(fruits);
+        document.getElementById("result").innerHTML = fruits;
+
+        let items = "";
+
+        for (let i = 0; i < fruits.length; i++) {
+            items += "<li>" + fruits[i] + "</li>";
+        }
+
+        document.getElementById("fruits").innerHTML = items;
+    </script>
+
+</body>
+</html>
+

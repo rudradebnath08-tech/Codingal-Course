@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 L3</title>
+</head>
+
+<body>
+    <h1>JS String Methods (or Functions)</h1>
+    <script>
+        // Let us learn something new today! //
+        let str = "A squid can be karate-chopped to death - like CHA! CHA!! CHOP!"; 
+        
+        console.log(str);
+        console.log(typeof(str));
+
+        let x = 5.5
+        console.log(x);
+        console.log(typeof(x));
+
+        document.write( str.toUpperCase() );
+        document.write("<br>");
+
+        document.write( str.toLowerCase() );
+        document.write("<br>");
+
+        document.write( str.startsWith("A squid") );
+        document.write("<br>");
+
+        let sentence = "Today I am learning about string methods.";
+        let pattern = new RegExp("ABOUT");
+        let result = pattern.test(sentence);
+        document.write(result);
+        
+    document.write("<br>");
+        document.write(sentence.includes("about"));
+        
+    </script>
+</body>
+
+</html>

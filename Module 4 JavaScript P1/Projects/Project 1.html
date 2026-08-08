@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P1 - Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <p>Perform all operations using JS</p>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mul"></p>
+    <p id="div"></p>
+
+    <button onclick="calculate()">Calculate</button>
+    <script>
+        function calculate() {
+            var num1 = 10;  
+            var num2 = 5;
+
+        var add = num1 + num2;
+        var sub = num1 - num2;
+        var mul = num1 * num2;
+        var div = num1 / num2;
+
+        document.getElementById("add").innerHTML =
+                "The added value of 10 + 5 is: " + add;
+            document.getElementById("sub").innerHTML =
+                "The subtracted value of 10 - 5 is: " + sub;
+            document.getElementById("mul").innerHTML =
+                "The multiplied value of 10 * 5 is: " + mul;
+            document.getElementById("div").innerHTML =
+                "The divided value of 10 / 5 is: " + div;
+        }
+    </script>
+</body>
+</html>

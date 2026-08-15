@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Superhero Power Cards</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;600;700&display=swap');
+
+        :root {
+            --bg1: #f5f7ff;
+            --bg2: #eef4ff;
+            --primary: #ff4d4d;
+            --primary-dark: #d93a3a;
+            --secondary: #2a6df6;
+            --accent: #ffd166;
+            --text: #1c2333;
+            --muted: #556074;
+            --card: rgba(255, 255, 255, 0.9);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            background: radial-gradient(circle at top, #ffffff 0%, var(--bg2) 22%, var(--bg1) 100%);
+            color: var(--text);
+            text-align: center;
+            padding: 40px 20px 60px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            color: var(--primary);
+            font-family: 'Bungee', 'Arial Black', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0 #ffd166, 6px 6px 0 rgba(42, 109, 246, 0.35);
+        }
+
+        .intro-text {
+            max-width: 760px;
+            margin: 0 auto 28px;
+            color: var(--muted);
+            font-size: 1.08rem;
+            line-height: 1.7;
+            font-weight: 600;
+            text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--primary) 0%, #ff6a5c 100%);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            box-shadow: 0 10px 22px rgba(255, 77, 77, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+
+        button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 28px rgba(255, 77, 77, 0.45);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .hero-card {
+            background: var(--card);
+            border: 3px solid rgba(255, 77, 77, 0.9);
+            border-radius: 18px;
+            width: 240px;
+            padding: 18px 16px 20px;
+            box-shadow: 0 12px 24px rgba(42, 109, 246, 0.12), 0 6px 14px rgba(255, 77, 77, 0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 auto auto 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary), var(--primary));
+        }
+
+        .hero-card:hover {
+            transform: translateY(-6px) rotate(-0.5deg);
+            box-shadow: 0 18px 30px rgba(42, 109, 246, 0.18), 0 12px 20px rgba(255, 77, 77, 0.18);
+        }
+
+        .hero-name {
+            margin: 10px 0 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text);
+            font-family: 'Bungee', 'Arial Black', sans-serif;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 0 rgba(255, 209, 102, 0.8);
+        }
+
+        .hero-power {
+            margin: 10px 0;
+            color: var(--secondary);
+            font-weight: 800;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95rem;
+            text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-mission {
+            margin: 12px 0 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            line-height: 1.6;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Superhero Power Cards</h1>
+
+    <p>
+        Click the button to create superhero objects using JavaScript classes.
+    </p>
+
+    <button onclick="showHeroes()">Show Superheroes</button>
+
+    <div class="card-container" id="heroCards"></div>
+
+    <script>
+        // What is a Class?
+        // A class is a blueprint used to create objects.
+
+        class Superhero {
+
+            // Constructor
+            constructor(name, power, mission) {
+
+                // The this keyword stores values inside the object
+                this.name = name;
+                this.power = power;
+                this.mission = mission;
+            }
+
+            // Class Method
+            describeHero() {
+                return "<div class='hero-card'>" +
+                    "<p class='hero-name'>" + this.name + "</p>" +
+                    "<p class='hero-power'>Power: " + this.power + "</p>" +
+                    "<p class='hero-mission'>Mission: " + this.mission + "</p>" +
+                    "</div>";
+            }
+        }
+
+        function showHeroes() {
+
+            // Creating Objects
+            let hero1 = new Superhero(
+                "Captain Code",
+                "Debugging errors",
+                "Captain Code hunts down elusive bugs in complex software systems with laser precision. With the ability to trace code execution paths instantly and identify logical errors, this hero debugs millions of lines of code daily. Armed with powerful breakpoints and exception handling skills, Captain Code saves crashing applications and prevents catastrophic system failures worldwide."
+            );
+
+            let hero2 = new Superhero(
+                "Pixel Flash",
+                "Super speed design",
+                "Pixel Flash commands extraordinary design velocity, transforming creative visions into stunning digital experiences at supersonic speeds. With lightning-fast UI/UX implementation, this hero crafts responsive layouts, gorgeous color schemes, and intuitive interfaces that delight millions of users. Pixel Flash delivers pixel-perfect designs with seamless animations and beautiful visual effects that captivate audiences instantly."
+            );
+
+            let hero3 = new Superhero(
+                "Logic Girl",
+                "Smart problem-solving",
+                "Logic Girl wields unparalleled analytical prowess to unravel the most convoluted technical challenges. Using algorithmic thinking and systematic decomposition, she breaks down impossible problems into manageable solutions. With her mastery of computational logic and pattern recognition, Logic Girl solves puzzles that would perplex ordinary developers, saving entire digital infrastructure systems from catastrophic failure."
+            );
+
+            let hero4 = new Superhero(
+                "Data Knight",
+                "Data protection",
+                "Data Knight is the ultimate guardian of digital assets, wielding encryption, authentication, and security protocols with expert precision. This vigilant hero protects sensitive user information from cyber threats through advanced firewalls, secure databases, and impenetrable security frameworks. Data Knight ensures privacy, prevents data breaches, and maintains the trust of millions by safeguarding the digital realm's most valuable treasure."
+            );
+
+            document.getElementById("heroCards").innerHTML =
+                hero1.describeHero() +
+                hero2.describeHero() +
+                hero3.describeHero() +
+                hero4.describeHero();
+        }
+    </script>
+
+</body>
+
+</html>

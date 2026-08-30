@@ -8,7 +8,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('BG.png');
+    background-image: url('Images/BG.png');
     background-attachment: fixed;
     background-size: cover;
 }
